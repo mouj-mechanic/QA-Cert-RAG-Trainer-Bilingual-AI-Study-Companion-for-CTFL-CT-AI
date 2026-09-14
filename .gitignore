@@ -39,3 +39,10 @@ env/
 .DS_Store
 Thumbs.db
 *.log
+
+# Local Chroma backups — never commit
+vector_db_backup/
+
+
+.venv_cloud311/
+

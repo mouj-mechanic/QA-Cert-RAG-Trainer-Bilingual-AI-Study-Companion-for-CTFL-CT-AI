@@ -1,16 +1,18 @@
 # Chat_ISTQB — Unofficial AI Study Companion
-# Target runtime: Python 3.11 (select in Streamlit Community Cloud Advanced settings)
+# Target runtime: Python 3.11 (Streamlit Community Cloud → Advanced → Python 3.11)
+#
+# chromadb is pinned EXACTLY: the same version MUST create and read vector_db/.
 
-streamlit>=1.32.0,<2
-pypdf>=4.0.0
-chromadb>=0.4.22,<1
-sentence-transformers>=2.3.0,<4
-openai>=1.12.0,<2
-python-dotenv>=1.0.0
-numpy>=1.26.0,<3
+streamlit==1.63.0
+pypdf==6.18.1
+chromadb==1.5.9
+sentence-transformers==6.0.1
+openai==3.13.0
+python-dotenv==1.2.3
+numpy==2.4.6
 
 # Chroma on Streamlit Community Cloud (Linux): modern SQLite via pysqlite3
-pysqlite3-binary>=0.5.0; platform_system == "Linux"
+pysqlite3-binary==0.5.4; platform_system == "Linux"
 
 # Dev / CI (also harmless on Cloud)
-pytest>=8.0.0
+pytest==9.1.1
