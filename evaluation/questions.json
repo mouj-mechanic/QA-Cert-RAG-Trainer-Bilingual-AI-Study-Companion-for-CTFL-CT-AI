@@ -1,0 +1,38 @@
+[
+  {
+    "id": "CTFL_001",
+    "certification": "CTFL",
+    "language": "en",
+    "question": "What are the seven testing principles?",
+    "expected_document": "REPLACE_WITH_YOUR_CTFL_FILE_STEM",
+    "expected_chapter": "1",
+    "notes": "PLACEHOLDER — update after indexing your official CTFL 4.0.1 syllabus."
+  },
+  {
+    "id": "CTFL_002",
+    "certification": "CTFL",
+    "language": "fr",
+    "question": "Qu'est-ce que le paradoxe du pesticide ?",
+    "expected_document": "REPLACE_WITH_YOUR_CTFL_FILE_STEM",
+    "expected_chapter": "1",
+    "notes": "PLACEHOLDER — French query should still retrieve the correct CTFL source if multilingual embeddings work."
+  },
+  {
+    "id": "CTAI_001",
+    "certification": "CT-AI",
+    "language": "en",
+    "question": "Explain precision, recall and F1-score in an AI testing context.",
+    "expected_document": "REPLACE_WITH_YOUR_CTAI_FILE_STEM",
+    "expected_chapter": "3",
+    "notes": "PLACEHOLDER — update after indexing your official CT-AI 2.0 syllabus."
+  },
+  {
+    "id": "CTAI_002",
+    "certification": "CT-AI",
+    "language": "en",
+    "question": "What is the difference between test data and training data?",
+    "expected_document": "REPLACE_WITH_YOUR_CTAI_FILE_STEM",
+    "expected_chapter": "",
+    "notes": "PLACEHOLDER — also used to verify CT-AI filter does not return CTFL chunks."
+  }
+]

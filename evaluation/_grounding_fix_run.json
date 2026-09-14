@@ -1,0 +1,412 @@
+{
+  "score_table": [
+    {
+      "id": "EN1",
+      "relevant": true,
+      "scores": [
+        0.7577,
+        0.6673,
+        0.6139,
+        0.5727
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "EN2",
+      "relevant": true,
+      "scores": [
+        0.6302,
+        0.6043,
+        0.6019,
+        0.5725
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "EN3",
+      "relevant": true,
+      "scores": [
+        0.6261,
+        0.5905,
+        0.5631,
+        0.5583
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "EN4",
+      "relevant": true,
+      "scores": [
+        0.6509,
+        0.6469,
+        0.5817,
+        0.5695
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "EN5",
+      "relevant": true,
+      "scores": [
+        0.7998,
+        0.7361,
+        0.6756,
+        0.6752
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "FR1",
+      "relevant": true,
+      "scores": [
+        0.7539,
+        0.6813,
+        0.6241,
+        0.5882
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "FR2",
+      "relevant": true,
+      "scores": [
+        0.6082,
+        0.5854,
+        0.5851,
+        0.5773
+      ],
+      "gated_count": 4,
+      "sufficient": true
+    },
+    {
+      "id": "OOS",
+      "relevant": false,
+      "scores": [
+        0.4136,
+        0.4043,
+        0.3802,
+        0.3422
+      ],
+      "gated_count": 0,
+      "sufficient": false
+    }
+  ],
+  "e2e": [
+    {
+      "id": "E2E1",
+      "question": "What is the difference between narrow AI and general AI?",
+      "found": true,
+      "answer": "(A) The retrieved context does not define general AI. It states that narrow AI is designed to perform specific tasks and operates within a limited domain, while general AI is not mentioned or defined in the context provided.\n\n(B) Omitted — no example in the retrieved context.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "1",
+          "section": "1.1",
+          "page": 15,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7577
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6139
+        }
+      ],
+      "chunks": [
+        {
+          "score": 0.7577,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "and represents all de ployed AI  systems in use today. Narrow AI-based systems operate within a limited domain and can be highly  efficient at solving specialized problems, such as image recognition, speech processi ng, "
+        },
+        {
+          "score": 0.6673,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "ater applies to unseen images to classify them   accurately.  One fundamental difference between conventional and AI-based systems is how they approach problem- solving. Many AI-based systems rely on probabilistic reason"
+        },
+        {
+          "score": 0.6139,
+          "page": 12,
+          "chapter": "0",
+          "section": "0.10",
+          "preview": "ed systems and conventional systems,  and explore the spectrum of AI capabilities, ranging from narrow AI to super AI.  o Gain a foundational understanding of AI technologies, including generative AI (GenAI) ,  and the h"
+        },
+        {
+          "score": 0.5727,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "ing why an AI model made a particular decis ion is crucial.  Achieving transparency (see 2.1.1) and explainability in AI-driven decision-making has become a critical  focus in AI regulation.  Another significant distinct"
+        }
+      ],
+      "contains_weak_ai": false,
+      "llm_skipped": false
+    },
+    {
+      "id": "E2E2",
+      "question": "Explain precision, recall and F1-score for classifiers.",
+      "found": true,
+      "answer": "(A) Precision, recall, and F1-score are metrics used to evaluate the performance of classifiers in machine learning.\n\n- **Precision** measures the proportion of predicted positives that were correctly predicted. It indicates how sure one can be about positive predictions. The formula for precision is: \n  \\[ \\text{Precision} = \\frac{TP}{TP + FP} \\times 100\\% \\]\n  \n- **Recall** (also known as sensitivity) measures the proportion of actual positives that are correctly predicted. It reflects how confident one can be that no positives will be missed. The formula for recall is: \n  \\[ \\text{Recall} = \\frac{TP}{TP + FN} \\times 100\\% \\]\n\n- **F1-score** is calculated as the harmonic mean of precision and recall, with values ranging from 0 to 100. A score close to 100 indicates that the model achieves both high precision and high recall, suggesting minimal impact from classification errors (false positives and false negatives). The formula for F1-score is: \n  \\[ \\text{F1-score} = \\frac{2 \\times (\\text{Precision} \\times \\text{Recall})}{\\text{Precision} + \\text{Recall}} \\]\n\n(B) Omitted — no example in the retrieved context.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "",
+          "section": "",
+          "page": 33,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6261
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "",
+          "section": "",
+          "page": 34,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.5905
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "9",
+          "section": "",
+          "page": 69,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.5631
+        }
+      ],
+      "chunks": [
+        {
+          "score": 0.6261,
+          "page": 33,
+          "chapter": "",
+          "section": "",
+          "preview": "or false negatives. Key m etrics, such  as accuracy, precision, recall, and F1-score, are derived from this. These metrics measure classificati on  quality, highlighting the ML model’s strengths and weaknesses. This sect"
+        },
+        {
+          "score": 0.5905,
+          "page": 34,
+          "chapter": "",
+          "section": "",
+          "preview": "• Precision = TP / (TP + FP) * 100%  Precision measures the proportion of positives that were correctly predicted. It is a measure of  how sure one can be about positive predictions.  • Recall = TP / (TP + FN) * 100%  Re"
+        },
+        {
+          "score": 0.5631,
+          "page": 69,
+          "chapter": "9",
+          "section": "",
+          "preview": "ISTQB® Certified Tester  Certified Tester AI-Testing Syllabus           v2.0 GA Page 69 of 93 2026/04/17  © International Software Testing Qualifications Board  9   AI-Specific Terms  Term Name  Definition  accuracy  The"
+        },
+        {
+          "score": 0.5583,
+          "page": 75,
+          "chapter": "",
+          "section": "",
+          "preview": "ISTQB® Certified Tester  Certified Tester AI-Testing Syllabus           v2.0 GA Page 75 of 93 2026/04/17  © International Software Testing Qualifications Board  precision  An ML functional performance metric used to eval"
+        }
+      ],
+      "contains_weak_ai": false,
+      "llm_skipped": false
+    },
+    {
+      "id": "E2E3",
+      "question": "How does back-to-back testing help with the test oracle problem?",
+      "found": true,
+      "answer": "(A) Back-to-back testing offers a practical solution to the test oracle problem by using an alternative version of the system as a reference point (a pseudo-oracle). It involves comparing the outputs of the system being tested with those of the pseudo-oracle when both are presented with the same inputs. This approach helps determine the correctness of the outputs produced by the system under test.\n\n(B) Omitted — no example in the retrieved context.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "6",
+          "section": "6.1.10",
+          "page": 62,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7998
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "4",
+          "section": "4.1",
+          "page": 39,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7361
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6756
+        }
+      ],
+      "chunks": [
+        {
+          "score": 0.7998,
+          "page": 62,
+          "chapter": "6",
+          "section": "6.1.10",
+          "preview": "ISTQB® Certified Tester  Certified Tester AI-Testing Syllabus           v2.0 GA Page 62 of 93 2026/04/17  © International Software Testing Qualifications Board  6.1.10 Back-to-Back Testing  Back-to-back testing offers a "
+        },
+        {
+          "score": 0.7361,
+          "page": 39,
+          "chapter": "4",
+          "section": "4.1",
+          "preview": "by data and probabilities. This  requires assessment of performance distributions and confidence levels across diverse scenarios.  A central challenge in testing, known as the ‘test oracle problem’, arises when determini"
+        },
+        {
+          "score": 0.6756,
+          "page": 12,
+          "chapter": "0",
+          "section": "0.10",
+          "preview": "the  difficulties of defining test oracles.  o Learn how to test GenAI and large language models (LLM), using techniques such as red  teaming and exploratory testing for AI performing test tasks.  o Explore test strategi"
+        },
+        {
+          "score": 0.6752,
+          "page": 39,
+          "chapter": "4",
+          "section": "4.1",
+          "preview": "metimes requiring expert judgment or statistical reasoning.  Vague or incomplete system requirements further exacerbate the test oracle problem in AI testing.  Solutions may include using statistical evaluations, consult"
+        }
+      ],
+      "contains_weak_ai": false,
+      "llm_skipped": false
+    }
+  ],
+  "french": {
+    "found": true,
+    "answer": "(A) La différence entre narrow AI et general AI est que la narrow AI (intelligence artificielle étroite) est conçue pour effectuer des tâches spécifiques dans un domaine limité, tandis que la general AI (intelligence artificielle générale) aurait la capacité de comprendre, apprendre et appliquer des connaissances dans une variété de domaines, semblable à l'intelligence humaine. La narrow AI ne peut pas généraliser au-delà des fonctions qu'elle a apprises.\n\n(B) Omitted — no example in the retrieved context.",
+    "citations": [
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "1",
+        "section": "1.1",
+        "page": 15,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.7539
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "0",
+        "section": "0.10",
+        "page": 12,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6241
+      }
+    ],
+    "chunks": [
+      {
+        "score": 0.7539,
+        "page": 15,
+        "chapter": "1",
+        "section": "1.1",
+        "preview": "and represents all de ployed AI  systems in use today. Narrow AI-based systems operate within a limited domain and can be highly  efficient at solving specialized problems, such as image recognition, speech processi ng, "
+      },
+      {
+        "score": 0.6813,
+        "page": 15,
+        "chapter": "1",
+        "section": "1.1",
+        "preview": "ater applies to unseen images to classify them   accurately.  One fundamental difference between conventional and AI-based systems is how they approach problem- solving. Many AI-based systems rely on probabilistic reason"
+      },
+      {
+        "score": 0.6241,
+        "page": 12,
+        "chapter": "0",
+        "section": "0.10",
+        "preview": "ed systems and conventional systems,  and explore the spectrum of AI capabilities, ranging from narrow AI to super AI.  o Gain a foundational understanding of AI technologies, including generative AI (GenAI) ,  and the h"
+      },
+      {
+        "score": 0.5882,
+        "page": 15,
+        "chapter": "1",
+        "section": "1.1",
+        "preview": "ing why an AI model made a particular decis ion is crucial.  Achieving transparency (see 2.1.1) and explainability in AI-driven decision-making has become a critical  focus in AI regulation.  Another significant distinct"
+      }
+    ],
+    "contains_weak_ai": false
+  },
+  "trainer": {
+    "found": true,
+    "explanation": "Overfitting in machine learning occurs when a model performs significantly better on the training dataset than on the test dataset. This indicates that the model has learned the noise and details of the training data to an extent that it negatively impacts its performance on unseen data. During testing, overfitting can be detected by comparing the model's performance metrics, such as accuracy, precision, recall, or F1 score, between the training and test datasets. If the model shows high performance on the training dataset but poor performance on the test dataset, it suggests overfitting.\n\n(Source: CT-AI 2.0 — Page 61)",
+    "comprehension_question": "What performance metrics can be evaluated to detect overfitting in a machine learning model?",
+    "citations": [
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "6",
+        "section": "",
+        "page": 54,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6903
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "",
+        "section": "",
+        "page": 61,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6676
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "6",
+        "section": "",
+        "page": 89,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.662
+      }
+    ],
+    "verdict": "incorrect",
+    "feedback": "❌ Incorrect\n\nWhat was correct:\n- The student correctly identified that overfitting occurs when a model performs well on training data.\n\nWhat was incomplete:\n- The student did not mention any performance metrics that can be evaluated to detect overfitting, which is the main focus of the question.\n\nWhat was incorrect:\n- The student did not provide any information about how to test for overfitting or the evaluation process, which is crucial for understanding the concept.\n\nCorrected explanation:\nTo detect overfitting, the model's ML functional performance should be evaluated on a separate test dataset that was not used during training. This evaluation helps determine how well the model generalizes to new, unseen data.\n\nStudy tip:\nReview the specific performance metrics and evaluation methods used to assess overfitting in machine learning models.",
+    "eval_pages": [
+      61,
+      60,
+      74,
+      55
+    ],
+    "eval_sufficient": true
+  },
+  "hallucination": {
+    "found": false,
+    "answer": "I cannot find this information in the currently indexed ISTQB resources.",
+    "chunks": [],
+    "deterministic_refusal": true,
+    "sufficient": false
+  }
+}

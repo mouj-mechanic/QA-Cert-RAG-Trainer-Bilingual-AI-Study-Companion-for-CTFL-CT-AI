@@ -1,0 +1,532 @@
+{
+  "english": [
+    {
+      "id": "EN1",
+      "query": "What is the difference between narrow AI and general AI?",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.7577124834060669,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "and represents all de ployed AI \nsystems in use today. Narrow AI-based systems operate within a limited domain and can be highly \nefficient at solving specialized problems, such as image recognition, speech processi ng, and language \ntranslation. However, they lack the ability to generalize beyond t",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6672804355621338,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "ater applies to unseen images to classify them  \naccurately. \nOne fundamental difference between conventional and AI-based systems is how they approach problem-\nsolving. Many AI-based systems rely on probabilistic reasoning, statistical inference, and pattern \nrecognition to generate results. This a",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6139320135116577,
+          "page": 12,
+          "chapter": "0",
+          "section": "0.10",
+          "preview": "ed systems and conventional systems, \nand explore the spectrum of AI capabilities, ranging from narrow AI to super AI. \no Gain a foundational understanding of AI technologies, including generative AI (GenAI) , \nand the hardware, hosting, and development frameworks used to implement machine \nlearning",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5727032423019409,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "ing why an AI model made a particular decis ion is crucial. \nAchieving transparency (see 2.1.1) and explainability in AI-driven decision-making has become a critical \nfocus in AI regulation. \nAnother significant distinction is adaptability. Conventional systems are static and typically require manua",
+          "certification": "CT-AI"
+        }
+      ]
+    },
+    {
+      "id": "EN2",
+      "query": "What is overfitting in machine learning?",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.6301864981651306,
+          "page": 74,
+          "chapter": "",
+          "section": "",
+          "preview": "f the data \ndistribution. \noverfitting   \nThe generation of an ML model that corresponds too closely to \nthe training dataset, resulting in a model that finds it difficult to \ngeneralize to new data. \n(After ISO/IEC TR 29119-11) \nperceptron A neural network with just one layer and one neuron",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6042969822883606,
+          "page": 61,
+          "chapter": "",
+          "section": "",
+          "preview": "are consistently low on both the training \nand validation sets, it suggests that the model is underfitting. \nVisual inspection of the model’s learning curves can also help detect underfitting. If the training and \nvalidation errors remain high and relatively close together, without significant impro",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.601936936378479,
+          "page": 60,
+          "chapter": "6",
+          "section": "6.1.6",
+          "preview": "rent ground truth but instead compares the s tatistical \nproperties of the input and predicted output data distributions using a test such as Kolmogorov- Smirnov \n[STATS]. A significant difference in either of these distributions is an indicator that drift has occurred. \n6.1.8 Testing for Overfittin",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.57247394323349,
+          "page": 54,
+          "chapter": "6",
+          "section": "",
+          "preview": "for probabilistic machine \nlearning systems \nAI-6.1.4 (K2)  Summarize adversarial testing of machine learning systems \nAI-6.1.5 (K3)  Use metamorphic testing to derive test cases for a given scenario \nHO-6.1.6 (H2)  Apply metamorphic testing \nAI-6.1.7 (K2)  Explain how drift testing is used on opera",
+          "certification": "CT-AI"
+        }
+      ]
+    },
+    {
+      "id": "EN3",
+      "query": "Explain precision, recall and F1-score for classifiers.",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.6261325478553772,
+          "page": 33,
+          "chapter": "",
+          "section": "",
+          "preview": "or false negatives. Key m etrics, such \nas accuracy, precision, recall, and F1-score, are derived from this. These metrics measure classificati on \nquality, highlighting the ML model’s strengths and weaknesses. This section explores the calculation and \ninterpretation of these metrics to assess ML f",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5905407071113586,
+          "page": 34,
+          "chapter": "",
+          "section": "",
+          "preview": "• Precision = TP / (TP + FP) * 100% \nPrecision measures the proportion of positives that were correctly predicted. It is a measure of \nhow sure one can be about positive predictions. \n• Recall = TP / (TP + FN) * 100% \nRecall (also known as sensitivity) measures the proportion of actual positives tha",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5631305575370789,
+          "page": 69,
+          "chapter": "9",
+          "section": "",
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 69 of 93 2026/04/17 \n© International Software Testing Qualifications Board \n9   AI-Specific Terms \nTerm Name  Definition \naccuracy \nThe ML functional performance metric used to evaluate a \nclassifier, which measures",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5583398342132568,
+          "page": 75,
+          "chapter": "",
+          "section": "",
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 75 of 93 2026/04/17 \n© International Software Testing Qualifications Board \nprecision \nAn ML functional performance metric used to evaluate a classifier, \nwhich measures the proportion of predicted positives that we",
+          "certification": "CT-AI"
+        }
+      ]
+    },
+    {
+      "id": "EN4",
+      "query": "What are the input layer, hidden layers and output layer in a deep neural network?",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.6509352922439575,
+          "page": 35,
+          "chapter": "3",
+          "section": "3.3.3",
+          "preview": "an artificial neural network, \ncomprising just one layer. It can be used for supervised learning of binary classifiers for linearly separable \nproblems, which determine whether an input belongs to a specific class or not. For example, a perceptron \ncan distinguish between emails that are spam and th",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6469147801399231,
+          "page": 74,
+          "chapter": "",
+          "section": "",
+          "preview": "anguages. \nneural network \nA network of primitive processing elements connected by \nweighted links with adjustable weights, in which each element \nproduces a value by applying a nonlinear function to its input \nvalues, and transmits it to other elements or presents it as an \noutput value.  \nSynonym:",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5816627740859985,
+          "page": 36,
+          "chapter": "3",
+          "section": "3.4.1",
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 36 of 93 2026/04/17 \n© International Software Testing Qualifications Board \n3.4.1 Structure and Working of a Deep Neural Network \nA deep neural network is typically described as comprising three main types of layers",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5695198774337769,
+          "page": 26,
+          "chapter": "3",
+          "section": "",
+          "preview": "combinations on the training and \nbehavior of the models \n3.4 Neural Networks  \nAI-3.4.1 (K2)  Explain the structure and working of a deep neural network \nHO-3.4.2 (H1)  Experience the implementation of a perceptron \nAI-3.4.3 (K2)  Describe the different coverage measures for neural networks",
+          "certification": "CT-AI"
+        }
+      ]
+    },
+    {
+      "id": "EN5",
+      "query": "How does back-to-back testing help with the test oracle problem?",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.7998088598251343,
+          "page": 62,
+          "chapter": "6",
+          "section": "6.1.10",
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 62 of 93 2026/04/17 \n© International Software Testing Qualifications Board \n6.1.10 Back-to-Back Testing \nBack-to-back testing offers a practical solution to the test oracle problem. \nBack-to-back testing involves us",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.7361453175544739,
+          "page": 39,
+          "chapter": "4",
+          "section": "4.1",
+          "preview": "by data and probabilities. This \nrequires assessment of performance distributions and confidence levels across diverse scenarios. \nA central challenge in testing, known as the ‘test oracle problem’, arises when determining whether the \noutput produced by the system under test is correct for a given ",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6755949258804321,
+          "page": 12,
+          "chapter": "0",
+          "section": "0.10",
+          "preview": "the \ndifficulties of defining test oracles. \no Learn how to test GenAI and large language models (LLM), using techniques such as red \nteaming and exploratory testing for AI performing test tasks. \no Explore test strategies for MLS, covering various test levels and the application of risk-\nbased test",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.675187885761261,
+          "page": 39,
+          "chapter": "4",
+          "section": "4.1",
+          "preview": "metimes requiring expert judgment or statistical reasoning. \nVague or incomplete system requirements further exacerbate the test oracle problem in AI testing. \nSolutions may include using statistical evaluations, consulting domain experts, or defining a 'ground truth' \nagainst which to assess output",
+          "certification": "CT-AI"
+        }
+      ]
+    }
+  ],
+  "french": [
+    {
+      "query": "Quelle est la différence entre narrow AI et general AI ?",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.7538877725601196,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "and represents all de ployed AI \nsystems in use today. Narrow AI-based systems operate within a limited domain and can be highly \nefficient at solving specialized problems, such as image recognition, speech processi ng, and language \ntranslation. However, they lack the ability to generalize beyond t",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6812618970870972,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "ater applies to unseen images to classify them  \naccurately. \nOne fundamental difference between conventional and AI-based systems is how they approach problem-\nsolving. Many AI-based systems rely on probabilistic reasoning, statistical inference, and pattern \nrecognition to generate results. This a",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.6241195797920227,
+          "page": 12,
+          "chapter": "0",
+          "section": "0.10",
+          "preview": "ed systems and conventional systems, \nand explore the spectrum of AI capabilities, ranging from narrow AI to super AI. \no Gain a foundational understanding of AI technologies, including generative AI (GenAI) , \nand the hardware, hosting, and development frameworks used to implement machine \nlearning",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5882191061973572,
+          "page": 15,
+          "chapter": "1",
+          "section": "1.1",
+          "preview": "ing why an AI model made a particular decis ion is crucial. \nAchieving transparency (see 2.1.1) and explainability in AI-driven decision-making has become a critical \nfocus in AI regulation. \nAnother significant distinction is adaptability. Conventional systems are static and typically require manua",
+          "certification": "CT-AI"
+        }
+      ],
+      "linked_english": "EN1"
+    },
+    {
+      "query": "Qu'est-ce que le overfitting en apprentissage automatique ?",
+      "count": 4,
+      "chunks": [
+        {
+          "score": 0.6081987619400024,
+          "page": 74,
+          "chapter": "",
+          "section": "",
+          "preview": "f the data \ndistribution. \noverfitting   \nThe generation of an ML model that corresponds too closely to \nthe training dataset, resulting in a model that finds it difficult to \ngeneralize to new data. \n(After ISO/IEC TR 29119-11) \nperceptron A neural network with just one layer and one neuron",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.585360050201416,
+          "page": 54,
+          "chapter": "6",
+          "section": "",
+          "preview": "for probabilistic machine \nlearning systems \nAI-6.1.4 (K2)  Summarize adversarial testing of machine learning systems \nAI-6.1.5 (K3)  Use metamorphic testing to derive test cases for a given scenario \nHO-6.1.6 (H2)  Apply metamorphic testing \nAI-6.1.7 (K2)  Explain how drift testing is used on opera",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.585077166557312,
+          "page": 60,
+          "chapter": "6",
+          "section": "6.1.6",
+          "preview": "rent ground truth but instead compares the s tatistical \nproperties of the input and predicted output data distributions using a test such as Kolmogorov- Smirnov \n[STATS]. A significant difference in either of these distributions is an indicator that drift has occurred. \n6.1.8 Testing for Overfittin",
+          "certification": "CT-AI"
+        },
+        {
+          "score": 0.5772914290428162,
+          "page": 41,
+          "chapter": "",
+          "section": "",
+          "preview": "sally agreed-upon expected results. \n• Self-Learning Systems: These AI-based systems continuously update their internal models based \non new data encountered post-deployment. This causes the AI-based system’s ‘correct’ behavior \nto change over time so that system responses remain effective and appro",
+          "certification": "CT-AI"
+        }
+      ],
+      "linked_english": "EN2"
+    }
+  ],
+  "filter_check": {
+    "ctfl_count": 0,
+    "ctai_count": 4,
+    "ctai_all_ctai": true,
+    "ctai_certs": [
+      "CT-AI",
+      "CT-AI",
+      "CT-AI",
+      "CT-AI"
+    ]
+  },
+  "e2e": [
+    {
+      "id": "E2E1",
+      "question": "What is the difference between narrow AI and general AI?",
+      "found": true,
+      "answer": "(A) According to the retrieved context, narrow AI (also known as weak AI) is designed to perform specific tasks within a limited domain and is highly efficient at solving specialized problems, such as image recognition or speech processing. In contrast, general AI (not explicitly defined in the retrieved context) would imply a system that possesses the ability to understand, learn, and apply intelligence across a wide range of tasks, similar to human cognitive abilities. The context does not provide a detailed definition of general AI.\n\n(B) **Example**: A narrow AI system might be a facial recognition software that can identify faces in photos but cannot perform tasks like language translation or playing chess. General AI, on the other hand, would be able to perform both of these tasks and more, adapting to new challenges without needing specific retraining for each new task.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "1",
+          "section": "1.1",
+          "page": 15,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7577
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6139
+        }
+      ],
+      "pages": [
+        15,
+        15,
+        12,
+        15
+      ],
+      "scores": [
+        0.7577124834060669,
+        0.6672804355621338,
+        0.6139320135116577,
+        0.5727032423019409
+      ]
+    },
+    {
+      "id": "E2E2",
+      "question": "Explain precision, recall and F1-score for classifiers.",
+      "found": true,
+      "answer": "(A) The indexed sources provide definitions and explanations for precision, recall, and F1-score as follows:\n\n- **Precision**: This metric measures the proportion of true positives (TP) among all predicted positives (TP + false positives (FP)). It indicates how confident one can be about positive predictions. The formula is:  \n  \\[ \\text{Precision} = \\frac{TP}{TP + FP} \\times 100\\% \\]\n\n- **Recall**: Also known as sensitivity, recall measures the proportion of actual positives that are correctly predicted. It reflects how confident one can be that no positives will be missed. The formula is:  \n  \\[ \\text{Recall} = \\frac{TP}{TP + FN} \\times 100\\% \\]\n\n- **F1-score**: This is the harmonic mean of precision and recall, providing a balance between the two metrics. It ranges from 0 to 100, with a higher score indicating better performance. The formula is:  \n  \\[ \\text{F1-score} = \\frac{2 \\times (\\text{Precision} \\times \\text{Recall})}{\\text{Precision} + \\text{Recall}} \\]\n\nA high F1-score suggests that the model has a good balance of precision and recall, while a low score indicates issues with accurately identifying positives. \n\nSources: CT-AI 2.0 — Page 34, Page 75.\n\n(B) **Examples**:\n- If a model predicts 80 positive cases, but only 60 are actually positive, the precision would be \\( \\frac{60}{80} \\times 100\\% = 75\\% \\).\n- If there are 100 actual positive cases and the model correctly identifies 60 of them, the recall would be \\( \\frac{60}{100} \\times 100\\% = 60\\% \\).\n- If the precision is 75% and recall is 60%, the F1-score would be calculated as \\( \\frac{2 \\times (75 \\times 60)}{75 + 60} \\approx 66.67\\% \\).",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "",
+          "section": "",
+          "page": 33,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6261
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "",
+          "section": "",
+          "page": 34,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.5905
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "9",
+          "section": "",
+          "page": 69,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.5631
+        }
+      ],
+      "pages": [
+        33,
+        34,
+        69,
+        75
+      ],
+      "scores": [
+        0.6261325478553772,
+        0.5905407071113586,
+        0.5631305575370789,
+        0.5583398342132568
+      ]
+    },
+    {
+      "id": "E2E3",
+      "question": "How does back-to-back testing help with the test oracle problem?",
+      "found": true,
+      "answer": "(A) Back-to-back testing addresses the test oracle problem by using an alternative version of the system as a reference point, known as a pseudo-oracle. This method involves comparing the outputs of the system under test with those of the pseudo-oracle when both are presented with the same inputs. Ideally, the pseudo-oracle should not share common software components with the system being tested to avoid both systems producing the same incorrect output due to shared defects. This approach is particularly useful in AI testing, where defining expected results can be challenging.\n\n(Source: CT-AI 2.0 — Chapter 6 — Section 6.1.10 — Page 62)\n\n(B) **Example**: Imagine testing a new version of an AI-based image recognition system. You could use an older, stable version of the same system as a pseudo-oracle. By inputting the same images into both versions, you can compare the outputs. If both versions produce the same incorrect classification, it suggests a potential issue, but if they differ, it may indicate that the new version has improved or changed behavior.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "6",
+          "section": "6.1.10",
+          "page": 62,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7998
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "4",
+          "section": "4.1",
+          "page": 39,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7361
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6756
+        }
+      ],
+      "pages": [
+        62,
+        39,
+        12,
+        39
+      ],
+      "scores": [
+        0.7998088598251343,
+        0.7361453175544739,
+        0.6755949258804321,
+        0.675187885761261
+      ]
+    }
+  ],
+  "trainer": {
+    "explanation": "Overfitting in machine learning occurs when a model learns the training data too well, capturing noise and outliers rather than the underlying patterns. This results in the model performing significantly better on the training dataset compared to the test dataset. Essentially, an overfitted model is too complex, leading to poor generalization to new, unseen data.\n\nIn the context of AI testing, overfitting can be detected by comparing the model's performance metrics, such as accuracy, precision, recall, or F1 score, between the training and validation datasets. If the model shows high performance on the training set but significantly lower performance on the validation set, it indicates overfitting. Visual inspection of learning curves can also help identify this issue, as the training curve may show a low error while the validation curve remains high.\n\n**Example:** Suppose a machine learning model is trained to recognize images of cats and dogs. If the model memorizes specific images from the training set rather than learning general features (like fur patterns or shapes), it may classify training images correctly but fail to recognize new images of cats and dogs, indicating overfitting.\n\n(Source: CT-AI 2.0 — Chapter 6 — Page 61)",
+    "comprehension_question": "What are some performance metrics that can indicate overfitting in a machine learning model?",
+    "citations": [
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "6",
+        "section": "",
+        "page": 54,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6903
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "",
+        "section": "",
+        "page": 61,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6676
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "6",
+        "section": "",
+        "page": 89,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.662
+      }
+    ],
+    "verdict": "incorrect",
+    "feedback": "❌ Incorrect\n\nExplanation:\n- The student correctly identified that overfitting occurs when a model performs well on training data. However, they did not provide any performance metrics that can indicate overfitting, which was the main focus of the question.\n- The answer lacks specific metrics or methods for detecting overfitting, such as evaluating the model's performance on a separate test dataset or analyzing learning curves.\n\nCorrected Explanation:\nTo indicate overfitting in a machine learning model, one can evaluate the model's performance on a separate test dataset that was not used during training. Performance metrics such as accuracy, precision, recall, or F1 score can be compared between the training and test datasets. Additionally, visual inspection of learning curves can help identify overfitting, where the training error decreases while the validation error starts to increase.\n\nStudy Tip:\nReview the concepts of performance metrics and learning curves in machine learning to better understand how to detect overfitting and underfitting.",
+    "eval_pages": [
+      61,
+      60,
+      74,
+      6
+    ]
+  },
+  "hallucination": {
+    "question": "According to the ISTQB CT-AI syllabus, what is the official CTFL pesticide paradox definition?",
+    "found": true,
+    "answer": "(A) The information regarding the official definition of the pesticide paradox is not found in the indexed resources related to the ISTQB CT-AI syllabus.\n\n(B) The pesticide paradox generally refers to the idea that running the same set of tests repeatedly will not uncover new defects, similar to how using the same pesticide repeatedly can lead to pests developing resistance. In software testing, it emphasizes the need for diverse testing approaches to discover new issues.",
+    "count": 4,
+    "scores": [
+      0.41357988119125366,
+      0.4043281078338623,
+      0.38019120693206787,
+      0.3421768546104431
+    ],
+    "pages": [
+      91,
+      58,
+      43,
+      76
+    ],
+    "previews": [
+      "v2.0 Page 91 of 93 2026/04/17 \n© International Software Testing Qualifications Board \n14 Appendix C – Release Notes  \nThe ISTQB CT-AI v2.0 is a major update and rewrite of v1.0. Due to rapidly evolvin",
+      "tems \nAdversarial testing involves deliberately providing the model with perturbations to t he input data that are \noften imperceptible to humans. These inputs are designed to cause the model to make ",
+      "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 43 of 93 2026/04/17 \n© International Software Testing Qualifications Board \nmalicious inputs, for safety and other ",
+      "achine A supervised ML algorithm that finds the optimal hyperplane \nbetween data points for classification or ML regression tasks. \ntechnological singularity \nA point in the future when technological "
+    ]
+  },
+  "french_response": {
+    "answer": "(A) Selon le contexte récupéré, la différence entre narrow AI (IA étroite) et general AI (IA générale) réside dans leur capacité et leur domaine d'application. La narrow AI est conçue pour effectuer des tâches spécifiques dans un domaine limité et est très efficace pour résoudre des problèmes spécialisés, comme la reconnaissance d'images ou la traduction de langues. En revanche, la general AI, qui n'est pas encore réalisée, aurait la capacité de comprendre, apprendre et appliquer des connaissances dans une variété de domaines, semblable à l'intelligence humaine. Actuellement, tous les systèmes d'IA déployés sont des narrow AI, tandis que la general AI reste un objectif futur.\n\n(B) **Exemple** : Un système de narrow AI pourrait être un logiciel de reconnaissance faciale qui identifie des personnes sur des photos. Il est très performant dans cette tâche, mais ne peut pas traduire des langues sans être spécifiquement entraîné pour cela. En revanche, une general AI pourrait comprendre et exécuter une multitude de tâches variées, comme résoudre des problèmes mathématiques, jouer à des jeux, et converser sur différents sujets, tout cela sans nécessiter d'entraînement spécifique pour chaque tâche.",
+    "citations": [
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "1",
+        "section": "1.1",
+        "page": 15,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.7539
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "0",
+        "section": "0.10",
+        "page": 12,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6241
+      }
+    ],
+    "pages": [
+      15,
+      15,
+      12,
+      15
+    ],
+    "found": true
+  }
+}

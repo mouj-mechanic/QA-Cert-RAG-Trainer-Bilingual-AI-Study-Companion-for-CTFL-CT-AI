@@ -1,0 +1,466 @@
+{
+  "cases": [
+    {
+      "label": "E2E1 EN",
+      "found": true,
+      "grounding": "PASS",
+      "repair_attempted": true,
+      "unsupported_claims": [],
+      "draft_answer": "Narrow AI, also known as weak AI, is designed to perform specific tasks and operates within a limited domain, making it efficient at solving specialized problems. In contrast, general AI would possess the ability to understand, learn, and apply knowledge across a wide range of tasks, similar to human intelligence. However, general AI has not yet been achieved.",
+      "repaired_answer": "Narrow AI, also known as weak AI, is designed to perform specific tasks and operates within a limited domain, making it efficient at solving specialized problems.",
+      "final_answer": "Narrow AI, also known as weak AI, is designed to perform specific tasks and operates within a limited domain, making it efficient at solving specialized problems.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "1",
+          "section": "1.1",
+          "page": 15,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7577
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6139
+        }
+      ],
+      "flags": [],
+      "chunks": [
+        {
+          "score": 0.7577124834060669,
+          "metadata": {
+            "language": "en",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "section": "1.1",
+            "chapter": "1",
+            "page": 15,
+            "version": "2.0",
+            "chunk_index": 51,
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "certification": "CT-AI"
+          },
+          "preview": "and represents all de ployed AI \nsystems in use today. Narrow AI-based systems operate within a limited domain and can be highly \nefficient at solving specialized problems, such as image recognition, speech processi ng, and language \ntransl",
+          "chunk_id": "S1"
+        },
+        {
+          "score": 0.6672804355621338,
+          "metadata": {
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "language": "en",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "chunk_index": 49,
+            "certification": "CT-AI",
+            "version": "2.0",
+            "section": "1.1",
+            "chapter": "1",
+            "page": 15
+          },
+          "preview": "ater applies to unseen images to classify them  \naccurately. \nOne fundamental difference between conventional and AI-based systems is how they approach problem-\nsolving. Many AI-based systems rely on probabilistic reasoning, statistical inf",
+          "chunk_id": "S2"
+        },
+        {
+          "score": 0.6139320135116577,
+          "metadata": {
+            "language": "en",
+            "page": 12,
+            "chunk_index": 40,
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "chapter": "0",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "certification": "CT-AI",
+            "version": "2.0",
+            "section": "0.10"
+          },
+          "preview": "ed systems and conventional systems, \nand explore the spectrum of AI capabilities, ranging from narrow AI to super AI. \no Gain a foundational understanding of AI technologies, including generative AI (GenAI) , \nand the hardware, hosting, an",
+          "chunk_id": "S3"
+        },
+        {
+          "score": 0.5727032423019409,
+          "metadata": {
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "version": "2.0",
+            "chapter": "1",
+            "certification": "CT-AI",
+            "page": 15,
+            "section": "1.1",
+            "language": "en",
+            "chunk_index": 50
+          },
+          "preview": "ing why an AI model made a particular decis ion is crucial. \nAchieving transparency (see 2.1.1) and explainability in AI-driven decision-making has become a critical \nfocus in AI regulation. \nAnother significant distinction is adaptability.",
+          "chunk_id": "S4"
+        }
+      ]
+    },
+    {
+      "label": "E2E1 FR",
+      "found": true,
+      "grounding": "PASS",
+      "repair_attempted": true,
+      "unsupported_claims": [],
+      "draft_answer": "La narrow AI, ou intelligence artificielle étroite, est conçue pour effectuer des tâches spécifiques et représente tous les systèmes d'IA déployés aujourd'hui. Elle opère dans un domaine limité et peut être très efficace pour résoudre des problèmes spécialisés, comme la reconnaissance d'images. En revanche, la general AI, ou intelligence artificielle générale, n'a pas encore été atteinte et se caractérise par sa capacité à généraliser au-delà des fonctions qu'elle a apprises.",
+      "repaired_answer": "La narrow AI, ou intelligence artificielle étroite, est conçue pour effectuer des tâches spécifiques et représente tous les systèmes d'IA déployés aujourd'hui. Elle opère dans un domaine limité et peut être très efficace pour résoudre des problèmes spécialisés.",
+      "final_answer": "La narrow AI, ou intelligence artificielle étroite, est conçue pour effectuer des tâches spécifiques et représente tous les systèmes d'IA déployés aujourd'hui. Elle opère dans un domaine limité et peut être très efficace pour résoudre des problèmes spécialisés.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "1",
+          "section": "1.1",
+          "page": 15,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7539
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6241
+        }
+      ],
+      "flags": [],
+      "chunks": [
+        {
+          "score": 0.7538877725601196,
+          "metadata": {
+            "certification": "CT-AI",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "chapter": "1",
+            "section": "1.1",
+            "page": 15,
+            "language": "en",
+            "chunk_index": 51,
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "version": "2.0"
+          },
+          "preview": "and represents all de ployed AI \nsystems in use today. Narrow AI-based systems operate within a limited domain and can be highly \nefficient at solving specialized problems, such as image recognition, speech processi ng, and language \ntransl",
+          "chunk_id": "S1"
+        },
+        {
+          "score": 0.6812618970870972,
+          "metadata": {
+            "certification": "CT-AI",
+            "section": "1.1",
+            "chunk_index": 49,
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "version": "2.0",
+            "chapter": "1",
+            "language": "en",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "page": 15
+          },
+          "preview": "ater applies to unseen images to classify them  \naccurately. \nOne fundamental difference between conventional and AI-based systems is how they approach problem-\nsolving. Many AI-based systems rely on probabilistic reasoning, statistical inf",
+          "chunk_id": "S2"
+        },
+        {
+          "score": 0.6241195797920227,
+          "metadata": {
+            "page": 12,
+            "section": "0.10",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "language": "en",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "version": "2.0",
+            "certification": "CT-AI",
+            "chunk_index": 40,
+            "chapter": "0"
+          },
+          "preview": "ed systems and conventional systems, \nand explore the spectrum of AI capabilities, ranging from narrow AI to super AI. \no Gain a foundational understanding of AI technologies, including generative AI (GenAI) , \nand the hardware, hosting, an",
+          "chunk_id": "S3"
+        },
+        {
+          "score": 0.5882191061973572,
+          "metadata": {
+            "page": 15,
+            "version": "2.0",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "chapter": "1",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "chunk_index": 50,
+            "certification": "CT-AI",
+            "language": "en",
+            "section": "1.1"
+          },
+          "preview": "ing why an AI model made a particular decis ion is crucial. \nAchieving transparency (see 2.1.1) and explainability in AI-driven decision-making has become a critical \nfocus in AI regulation. \nAnother significant distinction is adaptability.",
+          "chunk_id": "S4"
+        }
+      ]
+    },
+    {
+      "label": "E2E2",
+      "found": true,
+      "grounding": "PASS",
+      "repair_attempted": false,
+      "unsupported_claims": [],
+      "draft_answer": "Precision measures the proportion of predicted positives that were correct, while recall measures the proportion of actual positives that are correctly predicted. The F1-score is the harmonic mean of precision and recall, indicating the balance between the two metrics. A high F1-score suggests minimal classification errors, whereas a low score indicates difficulties in accurately identifying positives.",
+      "repaired_answer": null,
+      "final_answer": "Precision measures the proportion of predicted positives that were correct, while recall measures the proportion of actual positives that are correctly predicted. The F1-score is the harmonic mean of precision and recall, indicating the balance between the two metrics. A high F1-score suggests minimal classification errors, whereas a low score indicates difficulties in accurately identifying positives.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "",
+          "section": "",
+          "page": 33,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6261
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "",
+          "section": "",
+          "page": 34,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.5905
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "9",
+          "section": "",
+          "page": 69,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.5631
+        }
+      ],
+      "flags": [],
+      "chunks": [
+        {
+          "score": 0.6261325478553772,
+          "metadata": {
+            "page": 33,
+            "chunk_index": 118,
+            "chapter": "",
+            "section": "",
+            "certification": "CT-AI",
+            "version": "2.0",
+            "language": "en",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release"
+          },
+          "preview": "or false negatives. Key m etrics, such \nas accuracy, precision, recall, and F1-score, are derived from this. These metrics measure classificati on \nquality, highlighting the ML model’s strengths and weaknesses. This section explores the cal",
+          "chunk_id": "S1"
+        },
+        {
+          "score": 0.5905407071113586,
+          "metadata": {
+            "certification": "CT-AI",
+            "chunk_index": 120,
+            "language": "en",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "version": "2.0",
+            "page": 34,
+            "chapter": "",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "section": ""
+          },
+          "preview": "• Precision = TP / (TP + FP) * 100% \nPrecision measures the proportion of positives that were correctly predicted. It is a measure of \nhow sure one can be about positive predictions. \n• Recall = TP / (TP + FN) * 100% \nRecall (also known as ",
+          "chunk_id": "S2"
+        },
+        {
+          "score": 0.5631305575370789,
+          "metadata": {
+            "version": "2.0",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "section": "",
+            "page": 69,
+            "certification": "CT-AI",
+            "chapter": "9",
+            "language": "en",
+            "chunk_index": 234
+          },
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 69 of 93 2026/04/17 \n© International Software Testing Qualifications Board \n9   AI-Specific Terms \nTerm Name  Definition \naccuracy \nThe ML functional perfo",
+          "chunk_id": "S3"
+        },
+        {
+          "score": 0.5583398342132568,
+          "metadata": {
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "certification": "CT-AI",
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "language": "en",
+            "chapter": "",
+            "page": 75,
+            "section": "",
+            "chunk_index": 252,
+            "version": "2.0"
+          },
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 75 of 93 2026/04/17 \n© International Software Testing Qualifications Board \nprecision \nAn ML functional performance metric used to evaluate a classifier, \n",
+          "chunk_id": "S4"
+        }
+      ]
+    },
+    {
+      "label": "E2E3",
+      "found": true,
+      "grounding": "PASS",
+      "repair_attempted": false,
+      "unsupported_claims": [],
+      "draft_answer": "Back-to-back testing helps with the test oracle problem by using an alternative version of the system as a reference point (a pseudo-oracle) and comparing its outputs with those of the system being tested when presented with the same inputs. This approach provides a practical solution to determine the correctness of outputs, especially when well-defined specifications are lacking.",
+      "repaired_answer": null,
+      "final_answer": "Back-to-back testing helps with the test oracle problem by using an alternative version of the system as a reference point (a pseudo-oracle) and comparing its outputs with those of the system being tested when presented with the same inputs. This approach provides a practical solution to determine the correctness of outputs, especially when well-defined specifications are lacking.",
+      "citations": [
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "6",
+          "section": "6.1.10",
+          "page": 62,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7998
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "4",
+          "section": "4.1",
+          "page": 39,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.7361
+        },
+        {
+          "certification": "CT-AI",
+          "version": "2.0",
+          "chapter": "0",
+          "section": "0.10",
+          "page": 12,
+          "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+          "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+          "score": 0.6756
+        }
+      ],
+      "flags": [],
+      "chunks": [
+        {
+          "score": 0.7998088598251343,
+          "metadata": {
+            "chunk_index": 220,
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "language": "en",
+            "version": "2.0",
+            "certification": "CT-AI",
+            "page": 62,
+            "section": "6.1.10",
+            "chapter": "6",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release"
+          },
+          "preview": "ISTQB® Certified Tester \nCertified Tester AI-Testing Syllabus \n \n  \n \n \nv2.0 GA Page 62 of 93 2026/04/17 \n© International Software Testing Qualifications Board \n6.1.10 Back-to-Back Testing \nBack-to-back testing offers a practical solution t",
+          "chunk_id": "S1"
+        },
+        {
+          "score": 0.7361453175544739,
+          "metadata": {
+            "certification": "CT-AI",
+            "language": "en",
+            "chapter": "4",
+            "chunk_index": 133,
+            "section": "4.1",
+            "version": "2.0",
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "page": 39,
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf"
+          },
+          "preview": "by data and probabilities. This \nrequires assessment of performance distributions and confidence levels across diverse scenarios. \nA central challenge in testing, known as the ‘test oracle problem’, arises when determining whether the \noutp",
+          "chunk_id": "S2"
+        },
+        {
+          "score": 0.6755949258804321,
+          "metadata": {
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "language": "en",
+            "section": "0.10",
+            "certification": "CT-AI",
+            "version": "2.0",
+            "chunk_index": 42,
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "page": 12,
+            "chapter": "0"
+          },
+          "preview": "the \ndifficulties of defining test oracles. \no Learn how to test GenAI and large language models (LLM), using techniques such as red \nteaming and exploratory testing for AI performing test tasks. \no Explore test strategies for MLS, covering",
+          "chunk_id": "S3"
+        },
+        {
+          "score": 0.675187885761261,
+          "metadata": {
+            "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+            "page": 39,
+            "language": "en",
+            "certification": "CT-AI",
+            "version": "2.0",
+            "section": "4.1",
+            "chunk_index": 134,
+            "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+            "chapter": "4"
+          },
+          "preview": "metimes requiring expert judgment or statistical reasoning. \nVague or incomplete system requirements further exacerbate the test oracle problem in AI testing. \nSolutions may include using statistical evaluations, consulting domain experts, ",
+          "chunk_id": "S4"
+        }
+      ]
+    }
+  ],
+  "repairs_triggered": 4,
+  "french_en_fr": {
+    "found": true,
+    "grounding": "PASS",
+    "repair_attempted": true,
+    "final_answer": "La narrow AI, également connue sous le nom de weak AI, est conçue pour effectuer des tâches spécifiques et représente tous les systèmes d'IA déployés aujourd'hui. Elle opère dans un domaine limité et peut être très efficace pour résoudre des problèmes spécialisés.",
+    "citations": [
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "1",
+        "section": "1.1",
+        "page": 15,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.7539
+      },
+      {
+        "certification": "CT-AI",
+        "version": "2.0",
+        "chapter": "0",
+        "section": "0.10",
+        "page": 12,
+        "document": "ISTQB-_CTAI_Syllabus_v2.0_Release",
+        "source_file": "ct_ai\\en\\ISTQB-_CTAI_Syllabus_v2.0_Release.pdf",
+        "score": 0.6241
+      }
+    ],
+    "flags": []
+  },
+  "trainer": {
+    "found": true,
+    "grounding": "PASS",
+    "repair_attempted": true,
+    "explanation": "Overfitting in machine learning occurs when a model performs significantly worse on the test dataset than on the validation dataset. During testing, overfitting can be detected by evaluating the model’s performance metrics such as accuracy, precision, recall, or F1 score, which may be high on the training set but low on the validation set. Visual inspection of learning curves can also help identify overfitting, as the training performance may continue to improve while validation performance stagnates or declines. (S2, S3)",
+    "comprehension_question": "What performance metrics can indicate overfitting in a machine learning model?",
+    "verdict": "unknown",
+    "eval_grounding": "PASS",
+    "eval_repair": true
+  },
+  "hallucination": {
+    "found": false,
+    "answer": "I cannot find this information in the currently indexed ISTQB resources.",
+    "deterministic": true,
+    "llm_bypassed": true
+  }
+}

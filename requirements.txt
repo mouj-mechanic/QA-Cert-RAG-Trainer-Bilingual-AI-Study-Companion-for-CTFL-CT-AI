@@ -1,0 +1,10 @@
+# Chat_ISTQB — Unofficial AI Study Companion
+streamlit>=1.32.0
+pypdf>=4.0.0
+chromadb>=0.4.22
+sentence-transformers>=2.3.0
+torchvision>=0.17.0
+openai>=1.12.0
+python-dotenv>=1.0.0
+pytest>=8.0.0
+numpy>=1.26.0

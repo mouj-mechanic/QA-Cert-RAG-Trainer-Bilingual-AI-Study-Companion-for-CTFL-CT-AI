@@ -1,0 +1,35 @@
+# Secrets
+.env
+
+# Vector database artifacts
+vector_db/*
+!vector_db/.gitkeep
+
+# Copyrighted study materials — never commit PDFs
+resources/**/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+*.log
