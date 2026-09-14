@@ -32,9 +32,10 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "quiz_label": "AI-generated practice question based on the indexed syllabus.",
         "score": "Score",
         "missing_api_key": (
-            "⚠️ OpenAI API key not configured. Copy `.env.example` to `.env` "
-            "and set `OPENAI_API_KEY`. Indexing and retrieval can still work; "
-            "answer generation requires the key."
+            "⚠️ OpenAI API key not configured. On Streamlit Cloud, set "
+            "`OPENAI_API_KEY` in App secrets. Locally, copy `.env.example` to "
+            "`.env`. Indexing and retrieval can still work; answer generation "
+            "requires the key."
         ),
         "empty_index": (
             "⚠️ The vector index is empty. Add resources under `/resources` "
@@ -79,8 +80,9 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "quiz_label": "Question d'entraînement générée par IA à partir du syllabus indexé.",
         "score": "Score",
         "missing_api_key": (
-            "⚠️ Clé API OpenAI manquante. Copiez `.env.example` vers `.env` "
-            "et définissez `OPENAI_API_KEY`. L'indexation et la recherche "
+            "⚠️ Clé API OpenAI manquante. Sur Streamlit Cloud, définissez "
+            "`OPENAI_API_KEY` dans les Secrets de l'app. En local, copiez "
+            "`.env.example` vers `.env`. L'indexation et la recherche "
             "fonctionnent sans clé ; la génération de réponses en a besoin."
         ),
         "empty_index": (
