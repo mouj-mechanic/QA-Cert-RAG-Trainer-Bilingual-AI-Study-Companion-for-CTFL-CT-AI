@@ -1,13 +1,13 @@
 """
-Chat_ISTQB — Unofficial AI Study Companion
+Chat ISTQB — Unofficial AI Study Companion
 
 Streamlit entry point. Session memory only (no user accounts).
+UI/UX layer only — RAG / grounding / trainer backends are unchanged.
 """
 
 from __future__ import annotations
 
 # Streamlit Community Cloud often ships an older system SQLite than Chroma needs.
-# pysqlite3-binary is optional locally (esp. on Windows); required on Cloud.
 try:
     __import__("pysqlite3")
     import sys as _sys
@@ -21,22 +21,31 @@ from typing import Any
 
 import streamlit as st
 
-from src.config import CERTIFICATIONS, UNOFFICIAL_BANNER, has_openai_key
+from src.config import CERTIFICATIONS, has_openai_key
 from src.llm.provider import MissingAPIKeyError
 from src.rag.rag_pipeline import RAGPipeline
 from src.rag.vector_store import VectorStore
 from src.trainer.evaluator import AnswerEvaluator
 from src.trainer.quiz import QuizEngine, QuizSession
 from src.trainer.trainer import Trainer
-from src.ui.components import render_footer, render_rag_debug, render_sources
+from src.ui.components import (
+    inject_styles,
+    render_assistant_answer,
+    render_footer,
+    render_header,
+    render_rag_debug,
+    render_sources,
+    render_welcome,
+    thinking_status,
+)
 from src.ui.translations import t
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 st.set_page_config(
-    page_title="Chat_ISTQB",
-    page_icon="📘",
+    page_title="Chat ISTQB — AI Study Companion",
+    page_icon="🎓",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -54,6 +63,10 @@ def _init_state() -> None:
         "quiz_feedback": None,
         "last_debug": None,
         "show_sources": True,
+        # Fresh-session UI defaults (CT-AI + Français + Formateur)
+        "ui_language": "fr",
+        "ui_certification": "CT-AI",
+        "ui_mode": "trainer",
     }
     for key, value in defaults.items():
         if key not in st.session_state:
@@ -102,52 +115,99 @@ def _append(role: str, content: str, **meta: Any) -> None:
 
 
 def _sidebar() -> tuple[str, str, str, str | None]:
+    language = st.session_state.ui_language
+
     with st.sidebar:
-        st.title("Chat_ISTQB")
-        st.caption(t(st.session_state.get("_ui_lang", "en"), "app_subtitle"))
-        st.info(UNOFFICIAL_BANNER)
-
-        cert_labels = {v["label"]: k for k, v in CERTIFICATIONS.items()}
-        cert_label = st.selectbox(
-            t("en", "certification") + " / " + t("fr", "certification"),
-            options=list(cert_labels.keys()),
+        st.markdown(
+            f'<div class="ci-sidebar-brand">{t(language, "app_title")}</div>',
+            unsafe_allow_html=True,
         )
-        certification = cert_labels[cert_label]
-
-        lang_label = st.selectbox(
-            t("en", "language") + " / Langue",
-            options=["English", "Français"],
+        st.caption(t(language, "app_tagline"))
+        st.markdown(
+            f'<div class="ci-section-label">{t(language, "settings")}</div>',
+            unsafe_allow_html=True,
         )
-        language = "en" if lang_label == "English" else "fr"
-        st.session_state._ui_lang = language
 
-        mode_map = {
-            t(language, "mode_trainer"): "trainer",
-            t(language, "mode_ask"): "ask",
-            t(language, "mode_quiz"): "quiz",
+        # Certification — store key, display label
+        cert_keys = list(CERTIFICATIONS.keys())
+        cert_labels = [CERTIFICATIONS[k]["label"] for k in cert_keys]
+        try:
+            cert_index = cert_keys.index(st.session_state.ui_certification)
+        except ValueError:
+            cert_index = cert_keys.index("CT-AI") if "CT-AI" in cert_keys else 0
+        selected_label = st.selectbox(
+            t(language, "certification"),
+            options=cert_labels,
+            index=cert_index,
+        )
+        certification = next(
+            k for k, v in CERTIFICATIONS.items() if v["label"] == selected_label
+        )
+        st.session_state.ui_certification = certification
+
+        # Language — labels follow active UI language
+        lang_code_by_label = {
+            t(language, "lang_option_fr"): "fr",
+            t(language, "lang_option_en"): "en",
         }
-        mode_label = st.selectbox(t(language, "mode"), options=list(mode_map.keys()))
-        mode = mode_map[mode_label]
+        lang_labels = list(lang_code_by_label.keys())
+        current_lang_label = (
+            t(language, "lang_option_fr")
+            if st.session_state.ui_language == "fr"
+            else t(language, "lang_option_en")
+        )
+        chosen_lang_label = st.selectbox(
+            t(language, "language"),
+            options=lang_labels,
+            index=lang_labels.index(current_lang_label),
+        )
+        new_language = lang_code_by_label[chosen_lang_label]
+        if new_language != st.session_state.ui_language:
+            st.session_state.ui_language = new_language
+            st.rerun()
+        language = st.session_state.ui_language
 
-        chapter_raw = st.text_input(t(language, "chapter_optional"), value="")
+        # Mode — store internal key
+        mode_options = [
+            ("trainer", t(language, "mode_trainer")),
+            ("ask", t(language, "mode_ask")),
+            ("quiz", t(language, "mode_quiz")),
+        ]
+        mode_labels = [label for _, label in mode_options]
+        mode_by_label = {label: key for key, label in mode_options}
+        try:
+            mode_index = [key for key, _ in mode_options].index(st.session_state.ui_mode)
+        except ValueError:
+            mode_index = 0
+        chosen_mode_label = st.selectbox(
+            t(language, "mode"),
+            options=mode_labels,
+            index=mode_index,
+        )
+        mode = mode_by_label[chosen_mode_label]
+        st.session_state.ui_mode = mode
+
+        chapter_raw = st.text_input(
+            t(language, "chapter_optional"),
+            value="",
+            placeholder=t(language, "chapter_placeholder"),
+        )
         chapter = chapter_raw.strip() or None
 
         st.checkbox(t(language, "show_sources"), key="show_sources")
 
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button(t(language, "new_question")):
-                st.session_state.trainer_stage = "idle"
-                st.session_state.trainer_topic = ""
-                st.session_state.trainer_comprehension_q = ""
-                st.session_state.quiz_feedback = None
-        with col2:
-            if st.button(t(language, "reset_session")):
-                _reset_session()
-                st.rerun()
+        st.divider()
+        if st.button(t(language, "new_question"), use_container_width=True):
+            st.session_state.trainer_stage = "idle"
+            st.session_state.trainer_topic = ""
+            st.session_state.trainer_comprehension_q = ""
+            st.session_state.quiz_feedback = None
+        if st.button(t(language, "reset_session"), use_container_width=True):
+            _reset_session()
+            st.rerun()
 
         store = _get_vector_store()
-        st.caption(f"Indexed chunks: {store.count}")
+        st.caption(t(language, "indexed_chunks", count=store.count))
 
     return certification, language, mode, chapter
 
@@ -165,26 +225,33 @@ def _guardrails(language: str) -> bool:
     return ok
 
 
-def _render_history(language: str) -> None:
+def _render_history(language: str, mode: str) -> None:
     for msg in st.session_state.messages:
         with st.chat_message(msg["role"]):
-            st.markdown(msg["content"])
-            if msg.get("citations") and st.session_state.show_sources:
-                render_sources(msg["citations"], language)
-            if msg.get("comprehension_question"):
-                st.markdown(f"**{t(language, 'check_understanding')}**")
-                st.markdown(msg["comprehension_question"])
+            if msg["role"] == "assistant":
+                render_assistant_answer(
+                    language,
+                    msg["content"],
+                    citations=msg.get("citations") or [],
+                    comprehension_question=msg.get("comprehension_question"),
+                    show_sources=st.session_state.show_sources,
+                    show_explanation_label=mode == "trainer",
+                )
+            else:
+                st.markdown(msg["content"])
 
 
 def _handle_ask(certification: str, language: str, chapter: str | None, prompt: str) -> None:
     _append("user", prompt)
     try:
-        result = _get_pipeline().ask(
-            question=prompt,
-            certification=certification,
-            response_language=language,
-            chapter=chapter,
-        )
+        with thinking_status(language) as status:
+            status.update(label=t(language, "status_searching"), state="running")
+            result = _get_pipeline().ask(
+                question=prompt,
+                certification=certification,
+                response_language=language,
+                chapter=chapter,
+            )
     except MissingAPIKeyError as exc:
         _append("assistant", str(exc))
         return
@@ -202,17 +269,18 @@ def _handle_trainer(certification: str, language: str, chapter: str | None, prom
     stage = st.session_state.trainer_stage
 
     if stage == "awaiting_comprehension":
-        # Student is answering the comprehension question
         _append("user", prompt)
         try:
-            evaluation = _get_evaluator().evaluate(
-                original_topic=st.session_state.trainer_topic,
-                comprehension_question=st.session_state.trainer_comprehension_q,
-                student_answer=prompt,
-                certification=certification,
-                response_language=language,
-                chapter=chapter,
-            )
+            with thinking_status(language, evaluating=True) as status:
+                status.update(label=t(language, "status_evaluating"), state="running")
+                evaluation = _get_evaluator().evaluate(
+                    original_topic=st.session_state.trainer_topic,
+                    comprehension_question=st.session_state.trainer_comprehension_q,
+                    student_answer=prompt,
+                    certification=certification,
+                    response_language=language,
+                    chapter=chapter,
+                )
         except MissingAPIKeyError as exc:
             _append("assistant", str(exc))
             return
@@ -227,15 +295,16 @@ def _handle_trainer(certification: str, language: str, chapter: str | None, prom
         )
         return
 
-    # New topic explanation
     _append("user", prompt)
     try:
-        turn = _get_trainer().explain(
-            topic=prompt,
-            certification=certification,
-            response_language=language,
-            chapter=chapter,
-        )
+        with thinking_status(language) as status:
+            status.update(label=t(language, "status_searching"), state="running")
+            turn = _get_trainer().explain(
+                topic=prompt,
+                certification=certification,
+                response_language=language,
+                chapter=chapter,
+            )
     except MissingAPIKeyError as exc:
         _append("assistant", str(exc))
         return
@@ -265,7 +334,6 @@ def _render_quiz_ui(certification: str, language: str, chapter: str | None) -> N
 
     session: QuizSession | None = st.session_state.quiz_session
 
-    # Setup screen
     if session is None:
         diff_labels = {
             t(language, "easy"): "Easy",
@@ -279,7 +347,8 @@ def _render_quiz_ui(certification: str, language: str, chapter: str | None) -> N
         if st.button(t(language, "start_quiz"), type="primary"):
             if not _guardrails(language):
                 st.stop()
-            with st.spinner("…"):
+            with thinking_status(language) as status:
+                status.update(label=t(language, "status_generating"), state="running")
                 try:
                     session = _get_quiz_engine().start_quiz(
                         certification=certification,
@@ -299,26 +368,28 @@ def _render_quiz_ui(certification: str, language: str, chapter: str | None) -> N
             st.rerun()
         return
 
-    # Final score screen
     if session.finished and not st.session_state.quiz_feedback:
+        total = len(session.answers)
         st.success(
             f"{t(language, 'quiz_finished')} — "
-            f"{t(language, 'score')}: {session.correct_count}/{len(session.answers)} "
+            f"{t(language, 'score_result', correct=session.correct_count, total=total)} "
             f"— {session.score_percent}%"
         )
+        st.progress(min(1.0, session.score_percent / 100.0))
         st.markdown(f"**{t(language, 'breakdown')}**")
         for i, (q, ans) in enumerate(zip(session.questions, session.answers), start=1):
             mark = "✅" if ans == q.correct else "❌"
-            st.markdown(f"{mark} Q{i}: chose **{ans}** (correct **{q.correct}**)")
+            st.markdown(
+                f"{mark} Q{i}: {t(language, 'chose')} **{ans}** "
+                f"({t(language, 'correct_label')} **{q.correct}**)"
+            )
         if st.button(t(language, "start_quiz")):
             st.session_state.quiz_session = None
             st.session_state.quiz_feedback = None
             st.rerun()
         return
 
-    # Feedback after an answer
     if st.session_state.quiz_feedback:
-        # Show the question that was just answered (index already advanced)
         answered_idx = max(0, session.current_index - 1)
         question = session.questions[answered_idx]
         st.markdown(st.session_state.quiz_feedback)
@@ -329,10 +400,12 @@ def _render_quiz_ui(certification: str, language: str, chapter: str | None) -> N
             st.rerun()
         return
 
-    # Active question
     idx = session.current_index
     question = session.questions[idx]
-    st.markdown(f"**Question {idx + 1}/{len(session.questions)}**")
+    st.markdown(
+        f"**{t(language, 'quiz_progress', current=idx + 1, total=len(session.questions))}**"
+    )
+    st.progress((idx) / max(len(session.questions), 1))
     st.caption(question.label)
     st.markdown(question.question)
 
@@ -350,21 +423,26 @@ def _render_quiz_ui(certification: str, language: str, chapter: str | None) -> N
 
 def main() -> None:
     _init_state()
+    inject_styles()
     certification, language, mode, chapter = _sidebar()
 
-    st.title("Chat_ISTQB")
-    st.caption(t(language, "app_subtitle"))
-    st.info(UNOFFICIAL_BANNER)
+    render_header(language)
+
+    if mode == "trainer":
+        st.caption(t(language, "trainer_mode_badge"))
 
     can_generate = _guardrails(language)
 
     if mode == "quiz":
         _render_quiz_ui(certification, language, chapter)
         render_rag_debug(st.session_state.last_debug, language)
-        render_footer()
+        render_footer(language)
         return
 
-    _render_history(language)
+    if not st.session_state.messages:
+        render_welcome(language, certification)
+
+    _render_history(language, mode)
 
     if st.session_state.trainer_stage == "awaiting_comprehension" and mode == "trainer":
         st.info(t(language, "awaiting_answer"))
@@ -384,7 +462,7 @@ def main() -> None:
         st.rerun()
 
     render_rag_debug(st.session_state.last_debug, language)
-    render_footer()
+    render_footer(language)
 
 
 if __name__ == "__main__":

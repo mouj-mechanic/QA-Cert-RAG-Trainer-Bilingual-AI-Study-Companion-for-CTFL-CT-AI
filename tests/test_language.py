@@ -21,6 +21,13 @@ def test_french_and_english_queries_accepted(indexed_store):
 
 
 def test_translations_cover_both_languages():
-    assert "Trainer" in t("en", "mode_trainer") or t("en", "mode_trainer")
-    assert t("fr", "mode_trainer")
+    assert "Trainer" in t("en", "mode_trainer")
+    assert "Formateur" in t("fr", "mode_trainer")
+    assert t("en", "app_title") == "Chat ISTQB"
+    assert t("fr", "app_title") == "Chat ISTQB"
+    assert "_" not in t("en", "app_title")
     assert "cannot find" in t("en", "empty_index").lower() or "index" in t("en", "empty_index").lower()
+    # Full localization: shared keys exist in both languages
+    from src.ui.translations import TRANSLATIONS
+
+    assert set(TRANSLATIONS["en"]) == set(TRANSLATIONS["fr"])
