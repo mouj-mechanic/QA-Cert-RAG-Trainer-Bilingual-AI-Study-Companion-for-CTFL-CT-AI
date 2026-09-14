@@ -6,6 +6,16 @@ Streamlit entry point. Session memory only (no user accounts).
 
 from __future__ import annotations
 
+# Streamlit Community Cloud often ships an older system SQLite than Chroma needs.
+# pysqlite3-binary is optional locally (esp. on Windows); required on Cloud.
+try:
+    __import__("pysqlite3")
+    import sys as _sys
+
+    _sys.modules["sqlite3"] = _sys.modules.pop("pysqlite3")
+except ImportError:
+    pass
+
 import logging
 from typing import Any
 

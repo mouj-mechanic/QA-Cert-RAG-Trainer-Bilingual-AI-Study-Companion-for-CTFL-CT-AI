@@ -6,7 +6,7 @@ import logging
 
 from openai import OpenAI
 
-from src.config import OPENAI_API_KEY, OPENAI_MODEL
+from src.config import OPENAI_MODEL, get_openai_api_key
 from src.llm.provider import LLMProvider, MissingAPIKeyError
 
 logger = logging.getLogger(__name__)
@@ -17,7 +17,9 @@ class OpenAIProvider(LLMProvider):
 
     def __init__(self, api_key: str | None = None, model: str = OPENAI_MODEL) -> None:
         self.model = model
-        self._api_key = (api_key if api_key is not None else OPENAI_API_KEY).strip()
+        self._api_key = (
+            api_key if api_key is not None else get_openai_api_key()
+        ).strip()
         self._client: OpenAI | None = None
         if self.is_available():
             self._client = OpenAI(api_key=self._api_key)
@@ -35,7 +37,8 @@ class OpenAIProvider(LLMProvider):
     ) -> str:
         if not self.is_available() or self._client is None:
             raise MissingAPIKeyError(
-                "OPENAI_API_KEY is missing. Copy .env.example to .env and set your key."
+                "OPENAI_API_KEY is missing. Set it in Streamlit secrets "
+                "or copy .env.example to .env for local use."
             )
 
         logger.debug("Calling OpenAI model=%s", self.model)

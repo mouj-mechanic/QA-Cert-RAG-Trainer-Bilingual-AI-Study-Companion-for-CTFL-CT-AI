@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ---------------------------------------------------------------------------
-# Paths
+# Paths (always relative to the project root — safe for Streamlit Cloud)
 # ---------------------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 RESOURCES_DIR = PROJECT_ROOT / "resources"
@@ -47,9 +47,35 @@ MIN_RELEVANCE_SCORE = float(os.getenv("MIN_RELEVANCE_SCORE", "0.50"))
 # ---------------------------------------------------------------------------
 # LLM
 # ---------------------------------------------------------------------------
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 # Certification answers use temperature=0 via src.rag.grounding.CERTIFICATION_TEMPERATURE
+
+
+def get_openai_api_key() -> str:
+    """
+    Resolve the OpenAI API key without exposing it.
+
+    Preference order:
+    1) Streamlit secrets (Community Cloud / local secrets.toml)
+    2) Environment variable / .env via python-dotenv
+    """
+    try:
+        import streamlit as st
+
+        # st.secrets may raise if no secrets file exists locally
+        if "OPENAI_API_KEY" in st.secrets:
+            value = st.secrets["OPENAI_API_KEY"]
+            if value is not None and str(value).strip():
+                return str(value).strip()
+    except Exception:
+        pass
+
+    return os.getenv("OPENAI_API_KEY", "").strip()
+
+
+# Backward-compatible module attribute (may be empty until secrets are available).
+# Prefer get_openai_api_key() at call time for Streamlit Cloud.
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 
 # ---------------------------------------------------------------------------
 # Certification catalogue
@@ -86,6 +112,6 @@ UNOFFICIAL_BANNER = (
 
 
 def has_openai_key() -> bool:
-    """Return True when an API key is configured."""
-    key = OPENAI_API_KEY.strip()
+    """Return True when an API key is configured (secrets or environment)."""
+    key = get_openai_api_key()
     return bool(key) and key != "sk-your-key-here"

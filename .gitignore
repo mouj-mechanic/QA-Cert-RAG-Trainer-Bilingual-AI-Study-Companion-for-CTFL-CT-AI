@@ -1,7 +1,9 @@
 # Secrets
 .env
+.streamlit/secrets.toml
+secrets.toml
 
-# Vector database artifacts
+# Vector database artifacts (local index is not in git by default)
 vector_db/*
 !vector_db/.gitkeep
 
@@ -24,6 +26,10 @@ htmlcov/
 .venv/
 venv/
 env/
+
+# Local model / HF caches
+.cache/
+.huggingface/
 
 # IDE / OS
 .idea/

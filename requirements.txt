@@ -1,10 +1,16 @@
 # Chat_ISTQB — Unofficial AI Study Companion
-streamlit>=1.32.0
+# Target runtime: Python 3.11 (select in Streamlit Community Cloud Advanced settings)
+
+streamlit>=1.32.0,<2
 pypdf>=4.0.0
-chromadb>=0.4.22
-sentence-transformers>=2.3.0
-torchvision>=0.17.0
-openai>=1.12.0
+chromadb>=0.4.22,<1
+sentence-transformers>=2.3.0,<4
+openai>=1.12.0,<2
 python-dotenv>=1.0.0
+numpy>=1.26.0,<3
+
+# Chroma on Streamlit Community Cloud (Linux): modern SQLite via pysqlite3
+pysqlite3-binary>=0.5.0; platform_system == "Linux"
+
+# Dev / CI (also harmless on Cloud)
 pytest>=8.0.0
-numpy>=1.26.0
